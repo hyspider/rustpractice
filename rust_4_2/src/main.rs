@@ -16,14 +16,20 @@ fn run_correct() {
 }
 
 fn run_error() {
-    /*
     let mut s = String::from("hello");
 
     let r1 = &s; // no problem
     let r2 = &s; // no problem
-    let r3 = &mut s; // BIG PROBLEM
+    println!("{}, {}", r1, r2);
 
-    println!("{}, {}, and {}", r1, r2, r3);
-    */
-    println!("run error done");
+    let r3 = &mut s; // BIG PROBLEM
+    r3.push_str(" world3");
+    println!("{}", r3);
+
+    let r4 = &mut s; // BIG PROBLEM
+    r4.push_str("!");
+    println!("{}", r4);
+
+    //println!("{}, {}, and {}", r1, r2, r3);
+    println!("run error done {}", s);
 }
